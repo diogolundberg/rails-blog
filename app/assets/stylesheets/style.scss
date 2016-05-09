@@ -518,7 +518,7 @@ button.close:hover {
 	color:#FFF;
 	font-size:18px;
 	line-height:26px;
-	background:#212425 url('../images/base-bg-image.jpg') no-repeat top center;
+	background:#212425 image-url('base-bg-image.jpg') no-repeat top center;
 	background-size:cover;
 }
 	.bg-image h1, .bg-image h2, .bg-image h3, .bg-image h4, .bg-image h5, .bg-image h6 { color:#FFF; }
@@ -679,7 +679,7 @@ button.close:hover {
 /* ========================= Header ========================= */
 
 #header {
-	background:#212425 url('../images/base-header.jpg') no-repeat fixed top center;
+	background:#212425 image-url('base-header.jpg') no-repeat fixed top center;
 	background-size:cover;
 }
 
@@ -758,7 +758,7 @@ button.close:hover {
 	transition:top .3s ease;
 }
 .ie #navigation_affix {
-	background:url('../images/ie-bg-navigation_affix.png') repeat top left;
+	background:image-url('ie-bg-navigation_affix.png') repeat top left;
 	border-bottom:1px solid #e4e4e4;
 }
 #navigation_affix.show { top:0px; }
@@ -861,9 +861,9 @@ button.close:hover {
 		-webkit-transition:none;
 		transition:none;
 	}
-	.ie #header .header-content .btn-link { background:url('../images/ie-bg-header-btn-link.png') repeat top left; }
+	.ie #header .header-content .btn-link { background:image-url('ie-bg-header-btn-link.png') repeat top left; }
 	#header .header-content .btn-link:hover { background-color:rgba(0,0,0,.4); }
-	.ie #header .header-content .btn-link:hover { background:url('../images/ie-bg-header-btn-link-hover.png') repeat top left; }
+	.ie #header .header-content .btn-link:hover { background:image-url('ie-bg-header-btn-link-hover.png') repeat top left; }
 	
 	#header .header-content .header-text {
 		font-size:16px;
@@ -943,7 +943,7 @@ button.close:hover {
 				background-color:rgba(255,255,255,.5);
 				z-index:400;
 			}
-			.ie #header .header-content .header-form-wrapper .header-form .submit-status { background:url('../images/ie-bg-submit-status.png') repeat top left; }
+			.ie #header .header-content .header-form-wrapper .header-form .submit-status { background:image-url('ie-bg-submit-status.png') repeat top left; }
 				#header .header-content .header-form-wrapper .header-form .submit-status span {
 					position:absolute;
 					top:50%;
@@ -1085,7 +1085,7 @@ button.close:hover {
 .affa_testimonial { margin-bottom:40px; }
 	.affa_testimonial .affa_testimonial_text {
 		min-height:48px;
-		background:url('../images/icon-testimonial-text.png') no-repeat top left;
+		background:image-url('icon-testimonial-text.png') no-repeat top left;
 	}
 		.affa_testimonial .affa_testimonial_text p { margin:0px; }
 	.affa_testimonial .affa_testimonial_name {
@@ -1121,7 +1121,7 @@ button.close:hover {
 
 #bottom {
 	text-align:center;
-	background:url('../images/sep-border-bottom.png') no-repeat top center;
+	background:image-url('sep-border-bottom.png') no-repeat top center;
 	padding:60px 0px;
 }
 	#bottom .affa-form-subscribe {

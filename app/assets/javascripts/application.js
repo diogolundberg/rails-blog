@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require jquery-migrate.min.js
+//= require jquery.easing.min.js
+//= require response.min.js
+//= require jquery.placeholder.min.js
+//= require jquery.fitvids
+//= require waypoints.min.js
+//= require jquery.counterup.min.js
