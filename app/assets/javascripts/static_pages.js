@@ -21,7 +21,7 @@
       var navMenu = '<nav id="navigation_affix">';
       navMenu   += '<div class="container">';
       navMenu   += '<div class="navbar-brand">';
-      navMenu   += '<a href="index.html"><img src="/assets/logo_affix.png" alt="Logo" /></a>';
+      navMenu   += '<a href="index.html"><img src="/assets/pop-content-logo.png" alt="Logo" /></a>';
       navMenu   += '</div>';
       navMenu   += '<ul class="nav navbar-nav">';
       navMenu   += $('#navigation .nav.navbar-nav').html();
@@ -128,7 +128,7 @@
       });
       
       // Checking form input when focus and keypress event
-      $('.affa-form-signup input[type="text"], .affa-form-signup input[type="email"], .affa-form-signup input[type="password"], .affa-form-signup input[type="number"], .affa-form-signup textarea, .affa-form-signup select').on('focus keypress', function() {
+      $('.affa-form-signup input[type="text"], .affa-form-signup input[type="email"], .affa-form-signup select').on('focus keypress', function() {
         var $input = $(this);
         
         if ($input.hasClass('error')) {
@@ -177,24 +177,16 @@
         var submitData  = $form.serialize();
         var $name   = $form.find('input[name="name"]');
         var $email    = $form.find('input[name="email"]');
-        var $phone    = $form.find('input[name="phone"]');
-        var $message  = $form.find('textarea[name="message"]');
         var $submit   = $form.find('input[name="submit"]');
         var status    = true;
         if ($email.val() === '' || pattern.test($email.val()) === false) {
           $email.addClass('error');
           status = false;
         }
-        if ($message.val() === '') {
-          $message.addClass('error');
-          status = false;
-        }
         
         if (status) {
           $name.attr('disabled', 'disabled');
           $email.attr('disabled', 'disabled');
-          $phone.attr('disabled', 'disabled');
-          $message.attr('disabled', 'disabled');
           $submit.attr('disabled', 'disabled');
           
           $.ajax({
@@ -208,15 +200,11 @@
                 if (msg_split[0] === 'success') {
                   $name.val('').removeAttr('disabled');
                   $email.val('').removeAttr('disabled');
-                  $phone.val('').removeAttr('disabled');
-                  $message.val('').removeAttr('disabled');
                   $submit.removeAttr('disabled');
                   $form.find('.submit-status').html('<span class="success"><i class="fa fa-check-circle"></i> ' + msg_split[1] + '</span>').fadeIn(300).delay(3000).fadeOut(300);
                 } else {
                   $name.removeAttr('disabled');
                   $email.removeAttr('disabled');
-                  $phone.removeAttr('disabled');
-                  $message.removeAttr('disabled');
                   $submit.removeAttr('disabled');
                   $form.find('.submit-status').html('<span class="error"><i class="fa fa-exclamation-circle"></i> ' + msg_split[1] + '</span>').fadeIn(300).delay(3000).fadeOut(300);
                 }
