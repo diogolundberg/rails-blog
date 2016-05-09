@@ -149,8 +149,8 @@
           $submit.attr('disabled', 'disabled');
           $.ajax({
             type: 'POST',
-            url: 'process-subscribe.php',
-            data: submitData + '&action=add',
+            url: '/leads',
+            data: submitData,
             dataType: 'html',
             success: function(msg) {
               if (parseInt(msg, 0) !== 0) {
@@ -175,8 +175,8 @@
       $('.affa-form-signup').submit(function() {
         var $form   = $(this);
         var submitData  = $form.serialize();
-        var $name   = $form.find('input[name="name"]');
-        var $email    = $form.find('input[name="email"]');
+        var $name   = $form.find('input[name="lead[name]"]');
+        var $email    = $form.find('input[name="lead[email]"]');
         var $submit   = $form.find('input[name="submit"]');
         var status    = true;
         if ($email.val() === '' || pattern.test($email.val()) === false) {
@@ -191,8 +191,8 @@
           
           $.ajax({
             type: 'POST',
-            url: 'process-signup.php',
-            data: submitData + '&action=add',
+            url: '/leads',
+            data: submitData,
             dataType: 'html',
             success: function(msg) {
               if (parseInt(msg, 0) !== 0) {
