@@ -901,11 +901,13 @@ button.close:hover {
 	#header-content .header-form-wrapper {
 		color:#808080;
 		background-color:#f6f8f9;
+		border-radius: 7px;
 	}
 		#header-content .header-form-wrapper h1, #header-content .header-form-wrapper h2, #header-content .header-form-wrapper h3, #header-content .header-form-wrapper h4, #header-content .header-form-wrapper h5, #header-content .header-form-wrapper h6 { color:#4a4a4a; }
 		#header-content .header-form-wrapper .header-form-heading {
 			background-color:#FFF;
 			padding:25px 30px;
+			border-radius: 7px;
 		}
 			#header-content .header-form-wrapper .header-form-heading h4 {
 				overflow:hidden;
@@ -1486,7 +1488,6 @@ button.close:hover {
 	
 }
 
-
 @media (min-width: 992px) {
 	
 	#whats-app #whats-app-logo {
@@ -1494,7 +1495,10 @@ button.close:hover {
 	}
 	
 }
-
 #e-book {
 	border-bottom: none;
+}
+
+.sweet-alert .sa-button-container .confirm:hover {
+	background-color: #ee6400 !important;
 }

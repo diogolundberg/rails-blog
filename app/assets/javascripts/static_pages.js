@@ -195,20 +195,15 @@
             data: submitData,
             dataType: 'html',
             success: function(msg) {
-              if (parseInt(msg, 0) !== 0) {
-                var msg_split = msg.split('|');
-                if (msg_split[0] === 'success') {
-                  $name.val('').removeAttr('disabled');
-                  $email.val('').removeAttr('disabled');
-                  $submit.removeAttr('disabled');
-                  $form.find('.submit-status').html('<span class="success"><i class="fa fa-check-circle"></i> ' + msg_split[1] + '</span>').fadeIn(300).delay(3000).fadeOut(300);
-                } else {
-                  $name.removeAttr('disabled');
-                  $email.removeAttr('disabled');
-                  $submit.removeAttr('disabled');
-                  $form.find('.submit-status').html('<span class="error"><i class="fa fa-exclamation-circle"></i> ' + msg_split[1] + '</span>').fadeIn(300).delay(3000).fadeOut(300);
-                }
-              }
+              var msg_split = msg.split('|');
+              $name.removeAttr('disabled');
+              $email.removeAttr('disabled');
+
+              swal({
+                  title: "Good job!",
+                  text: "You clicked the button!",
+                  type: "success"
+              });
             }
           });
         }

@@ -28,11 +28,12 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
-        format.json { render :show, status: :created, location: @lead }
+        format.html { redirect_to root_path, notice: 'Lead was successfully created.' }
+        format.json { render :nothing, status: :success }
+
       else
-        format.html { render :new }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
+        format.html { redirect_to root_path }
+        format.json { render :nothing, status: :unprocessable_entity }
       end
     end
   end
